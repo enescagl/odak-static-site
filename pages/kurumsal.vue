@@ -35,6 +35,21 @@
 <script>
 export default {
   name: "kurumsal",
+  head() {
+    return {
+      title: "Kurumsal",
+      meta: [
+        {
+          property: "og:title",
+          content: "Odak Makina",
+          // following template options are identical
+          // template: '%s - My page',
+          vmid: "og:title"
+        }
+      ]
+    };
+  },
+
   data() {
     return {
       links: [

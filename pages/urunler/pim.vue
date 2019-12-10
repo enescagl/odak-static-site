@@ -5,7 +5,7 @@
     </div>
     <div class="mt-12 sm:ml-12 sm:mt-0">
       <div class>
-        <h2 class="text-sm font-semibold text-gray-700">Pim</h2>
+        <h2 class="text-sm font-semibold text-gray-700">{{$t("pin")}}</h2>
         <p
           class="text-xs mt-2 text-gray-700"
         >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus accusantium et necessitatibus recusandae similique nesciunt facere labore iure in soluta.</p>
@@ -30,9 +30,25 @@
     </div>
   </div>
 </template>
+<i18n>
+{
+  "tr":{
+    "pin": "Pim"
+  },
+  "en":{
+    "pin": "Pin"
+  }
+}
+</i18n>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: this.$t("pin")
+    };
+  }
+};
 </script>
 
 <style>

@@ -46,6 +46,19 @@
 import IndexCard from "@/components/IndexCard";
 export default {
   components: { IndexCard },
+  head() {
+    return {
+      title: "Odak Makina - Pim & Burç",
+      titleTemplate: null,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Odak Makina - Pim & Burç"
+        }
+      ]
+    };
+  },
   data() {
     return {
       cardInfos: [
