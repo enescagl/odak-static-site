@@ -45,7 +45,20 @@
 export default {
   head() {
     return {
-      title: this.$t("pin")
+      title: this.$t("pin"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.$t("pin")
+        },
+        {
+          property: "og:title",
+          content: this.$t("pin"),
+          template: chunk => `${chunk} - Odak İş Makinaları`,
+          vmid: "og:title"
+        }
+      ]
     };
   }
 };

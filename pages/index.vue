@@ -52,9 +52,12 @@ export default {
       titleTemplate: null,
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: "Odak Makina - Pim & Burç"
+          property: "og:title",
+          content: "Odak Makina",
+          // following template options are identical
+          // template: '%s - My page',
+          template: chunk => `${chunk} - Pim & Burç`,
+          vmid: "og:title"
         }
       ]
     };

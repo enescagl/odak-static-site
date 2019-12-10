@@ -44,12 +44,34 @@
     </div>
   </div>
 </template>
-
+<i18n>
+{
+  "tr":{
+    "contact": "İletişim"
+  },
+  "en":{
+    "contact": "Contact"
+  }
+}
+</i18n>
 <script>
 export default {
   head() {
     return {
-      title: "İletişim"
+      title: this.$t("contact"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.$t("contact")
+        },
+        {
+          property: "og:title",
+          content: this.$t("contact"),
+          template: chunk => `${chunk} - Odak İş Makinaları`,
+          vmid: "og:title"
+        }
+      ]
     };
   }
 };

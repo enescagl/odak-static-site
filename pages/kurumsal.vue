@@ -21,11 +21,13 @@
 <i18n>
 {
   "tr":{
+    "corp": "Kurumsal",
     "certs": "Belgelerimiz",
     "exhibitions": "Fuarlar",
     "about": "Hakkımızda"
     },
   "en":{
+    "corp": "Corparation",
     "certs": "Certificates",
     "exhibitions": "Exhibitions",
     "about": "About Us"
@@ -37,13 +39,17 @@ export default {
   name: "kurumsal",
   head() {
     return {
-      title: "Kurumsal",
+      title: this.$t("corp"),
       meta: [
         {
+          hid: "description",
+          name: "description",
+          content: this.$t("corp")
+        },
+        {
           property: "og:title",
-          content: "Odak Makina",
-          // following template options are identical
-          // template: '%s - My page',
+          content: this.$t("corp"),
+          template: chunk => `${chunk} - Odak İş Makinaları`,
           vmid: "og:title"
         }
       ]

@@ -5,11 +5,38 @@
     imageAlt="placeholder"
   ></BasicExhibition>
 </template>
-
+<i18n>
+{
+  "tr":{
+    "exhibitions":"Fuarlar"
+  },
+  "en":{
+    "exhibitions":"Exhibitions"
+  }
+}
+</i18n>
 <script>
 import BasicExhibition from "@/components/BasicExhibition";
 export default {
-  components: { BasicExhibition }
+  components: { BasicExhibition },
+  head() {
+    return {
+      title: this.$t("exhibitions"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.$t("exhibitions")
+        },
+        {
+          property: "og:title",
+          content: this.$t("exhibitions"),
+          template: chunk => `${chunk} - Odak İş Makinaları`,
+          vmid: "og:title"
+        }
+      ]
+    };
+  }
 };
 </script>
 

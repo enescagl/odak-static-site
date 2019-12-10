@@ -9,10 +9,37 @@
     </p>
   </div>
 </template>
-
+<i18n>
+{
+  "tr":{
+    "about":"Hakkımızda"
+  },
+  "en":{
+    "about":"About"
+  }
+}
+</i18n>
 <script>
 export default {
-  name: "hakkimizda"
+  name: "hakkimizda",
+  head() {
+    return {
+      title: this.$t("about"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.$t("about")
+        },
+        {
+          property: "og:title",
+          content: this.$t("about"),
+          template: chunk => `${chunk} - Odak İş Makinaları`,
+          vmid: "og:title"
+        }
+      ]
+    };
+  }
 };
 </script>
 

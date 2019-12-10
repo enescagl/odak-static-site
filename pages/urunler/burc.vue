@@ -45,7 +45,20 @@
 export default {
   head() {
     return {
-      title: this.$t("bushing")
+      title: this.$t("bushing"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.$t("bushing")
+        },
+        {
+          property: "og:title",
+          content: this.$t("bushing"),
+          template: chunk => `${chunk} - Odak İş Makinaları`,
+          vmid: "og:title"
+        }
+      ]
     };
   }
 };

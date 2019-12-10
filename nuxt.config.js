@@ -17,10 +17,15 @@ export default {
         // template: '%s - My page',
         template: chunk => `${chunk} - Odak İş Makinaları`,
         vmid: 'og:title'
+      },
+      {
+        property: 'og:description',
+        content: 'Odak İş Makinaları Websitesi',
+        vmid: 'og:description'
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap' }
     ]
   },
