@@ -1,0 +1,21 @@
+{
+  "name": "odak-makina-frontend",
+  "version": "1.0.0",
+  "description": "Odak Makina&#39;s nuxt frontend.",
+  "author": "enescagl",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.8.0",
+    "nuxt": "^2.10.2",
+    "nuxt-i18n": "^6.4.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^1.2.0"
+  }
+}
