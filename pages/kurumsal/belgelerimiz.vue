@@ -1,9 +1,5 @@
 <template>
-  <BasicCertificate
-    name="Kalite Belgesi - ISO 9001:2005"
-    imageUrl="https://via.placeholder.com/250"
-    imageAlt="placeholder"
-  ></BasicCertificate>
+  <BasicCertificate :name="name" imageUrl="https://via.placeholder.com/250" :imageAlt="imageAlt"></BasicCertificate>
 </template>
 <i18n>
 {
@@ -19,6 +15,18 @@
 import BasicCertificate from "@/components/BasicCertificate";
 export default {
   components: { BasicCertificate },
+  data() {
+    return {
+      name: {
+        tr: "Kalite Belgesi - ISO 9001:2005",
+        en: "Quality Certificate - ISO 9001:2005"
+      },
+      imageAlt: {
+        tr: "yertutucu",
+        en: "placeholder"
+      }
+    };
+  },
   head() {
     return {
       title: this.$t("certs"),

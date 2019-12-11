@@ -1,9 +1,9 @@
 <template>
-  <div class="sm:flex sm:px-24">
+  <div class="sm:flex sm:px-12 lg:px-24">
     <div class="sm:pb-20">
-      <div class="flex justify-between bg-gray-400 sm:flex-col sm:py-2 sm:rounded-sm">
+      <div class="flex bg-gray-400 sm:w-32 sm:flex-col sm:py-2 sm:rounded-sm">
         <nuxt-link
-          class="py-5 px-6 border-r last:border-r-0 sm:border-none sm:py-4 sm:px-5 hover:bg-gray-500 active:bg-gray-600"
+          class="w-1/3 py-5 border-r last:border-r-0 sm:w-full sm:border-none sm:py-4 sm:px-5 hover:bg-gray-500 active:bg-gray-600"
           v-for="link in links"
           :key="link.id"
           :to="localePath({name:link.route})"
@@ -14,7 +14,7 @@
         </nuxt-link>
       </div>
     </div>
-    <nuxt-child class="mt-6 mb-24 sm:mt-0 sm:mb-0 sm:ml-12" />
+    <nuxt-child class="px-8 mt-6 sm:mt-0 sm:mb-0 sm:ml-12" />
   </div>
 </template>
 

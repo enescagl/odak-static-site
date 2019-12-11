@@ -1,6 +1,6 @@
 <template>
-  <div class="mb-8 px-8 sm:flex sm:px-24">
-    <div class="w-1/2 h-128">
+  <div class="mb-8 px-8 lg:flex sm:px-12 lg:px-24">
+    <div class="h-96 lg:w-1/2 sm:h-128">
       <iframe
         class="w-full h-full border border-gray-400"
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3057.412944542083!2d32.7505192!3d39.9768762!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34997168cd735%3A0x7f329d843e4bb10!2sODAK%20MAK%C4%B0NA!5e0!3m2!1str!2str!4v1575913768910!5m2!1str!2str"
@@ -8,7 +8,7 @@
         allowfullscreen
       ></iframe>
     </div>
-    <div class="mt-6 sm:ml-12 sm:mt-0">
+    <div class="mt-8 sm:mt-16 lg:my-auto lg:ml-12">
       <div class="flex align-baseline">
         <div>
           <svg
@@ -24,7 +24,7 @@
             />
           </svg>
         </div>
-        <span class="ml-2 font-medium text-gray-600 text-xs">Uzayçağı Caddesi No: 60/A Ostim ANKARA</span>
+        <span class="ml-2 font-medium text-gray-600 text-xs">{{address}}</span>
       </div>
       <div class="mt-4 flex align-baseline">
         <span>
@@ -39,7 +39,37 @@
             />
           </svg>
         </span>
-        <span class="ml-2 font-medium text-gray-600 text-xs">03123123121</span>
+        <a :href="`tel:+9${phone1}`" class="ml-2 font-medium text-gray-600 text-xs">{{phone1}}</a>
+      </div>
+      <div class="mt-4 flex align-baseline">
+        <span>
+          <svg
+            class="w-4 h-4 text-gray-500"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.04 14.69L14.11 12.55C14.2176 12.3373 14.3976 12.1701 14.6177 12.0784C14.8377 11.9867 15.0832 11.9767 15.31 12.05L21.31 14.05C21.5105 14.1154 21.6852 14.2425 21.8091 14.4131C21.933 14.5837 21.9998 14.7891 22 15V20C22 20.5304 21.7893 21.0391 21.4142 21.4142C21.0391 21.7893 20.5304 22 20 22H18C13.7565 22 9.68687 20.3143 6.68629 17.3137C3.68571 14.3131 2 10.2435 2 6V4C2 2.9 2.9 2 4 2H9C9.20964 1.99946 9.41416 2.06482 9.58463 2.18685C9.7551 2.30887 9.88291 2.48138 9.95 2.68L11.95 8.68C12.0261 8.90811 12.0174 9.15598 11.9255 9.3782C11.8337 9.60043 11.6649 9.78212 11.45 9.89L9.3 10.96C10.189 12.5133 11.4767 13.801 13.03 14.69H13.04ZM8.28 4H4V6C4 9.71303 5.475 13.274 8.1005 15.8995C10.726 18.525 14.287 20 18 20H20V15.72L15.5 14.22L14.38 16.48C14.2638 16.7089 14.064 16.8843 13.822 16.9699C13.58 17.0555 13.3143 17.0448 13.08 16.94C10.4089 15.7359 8.26855 13.5991 7.06 10.93C6.95517 10.6957 6.94446 10.43 7.03008 10.188C7.11571 9.94604 7.29112 9.74624 7.52 9.63L9.78 8.49L8.28 4Z"
+            />
+          </svg>
+        </span>
+        <a :href="`tel:+9${phone2}`" class="ml-2 font-medium text-gray-600 text-xs">{{phone2}}</a>
+      </div>
+      <div class="mt-4 flex align-baseline">
+        <span>
+          <svg
+            class="w-4 h-4 text-gray-500"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 18V20C18 20.5304 17.7893 21.0391 17.4142 21.4142C17.0391 21.7893 16.5304 22 16 22H8C7.46957 22 6.96086 21.7893 6.58579 21.4142C6.21071 21.0391 6 20.5304 6 20V18H4C3.46957 18 2.96086 17.7893 2.58579 17.4142C2.21071 17.0391 2 16.5304 2 16V10C2 8.9 2.9 8 4 8H6V4C6 2.9 6.9 2 8 2H16C16.5304 2 17.0391 2.21071 17.4142 2.58579C17.7893 2.96086 18 3.46957 18 4V8H20C20.5304 8 21.0391 8.21071 21.4142 8.58579C21.7893 8.96086 22 9.46957 22 10V16C22 16.5304 21.7893 17.0391 21.4142 17.4142C21.0391 17.7893 20.5304 18 20 18H18ZM18 16H20V10H4V16H6V14C6 12.9 6.9 12 8 12H16C16.5304 12 17.0391 12.2107 17.4142 12.5858C17.7893 12.9609 18 13.4696 18 14V16ZM16 8V4H8V8H16ZM8 14V20H16V14H8Z"
+            />
+          </svg>
+        </span>
+        <a :href="`fax:+9${fax}`" class="ml-2 font-medium text-gray-600 text-xs">{{fax}}</a>
       </div>
     </div>
   </div>
@@ -56,6 +86,14 @@
 </i18n>
 <script>
 export default {
+  data() {
+    return {
+      address: "Uzayçağı Caddesi No: 60/A Ostim ANKARA",
+      phone1: "0 (312) 354 73 73",
+      phone2: "0 (312) 395 53 14",
+      fax: "0 (312) 395 36 44"
+    };
+  },
   head() {
     return {
       title: this.$t("contact"),

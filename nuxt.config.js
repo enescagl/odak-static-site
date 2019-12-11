@@ -56,18 +56,23 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    '@nuxtjs/robots'
   ],
   i18n: {
     strategy: 'prefix_and_default',
     defaultLocale: 'tr',
     locales: [
-      { 'code': 'tr', 'name': 'Türkçe' },
-      { 'code': 'en', 'name': 'English' }],
+      { 'code': 'tr', 'iso': 'tr-TR', 'name': 'Türkçe' },
+      { 'code': 'en', 'iso': 'en-US', 'name': 'English' }],
     vueI18n: {
       fallbackLocale: 'tr'
     },
     vueI18nLoader: true,
+  },
+  robots: {
+    UserAgent: '*',
+    Disallow: '/'
   },
   /*
   ** Axios module configuration
