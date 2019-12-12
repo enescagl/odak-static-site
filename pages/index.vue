@@ -7,12 +7,24 @@
     <div class="flex justify-end relative -mt-6 px-6 sm:px-12 lg:px-24">
       <nuxt-link
         :to="localePath({name:'urunler-pim'})"
-        class="w-20 h-20 bg-blue-500 sm:w-48 sm:h-24 lg:w-64 lg:h-32"
-      >{{$t('pin')}}</nuxt-link>
+        class="relative shadow overflow-hidden rounded w-20 h-20 bg-blue-500 sm:w-48 sm:h-24 lg:w-64 lg:h-32"
+      >
+        <div class="relative w-full h-full object-cover">
+          <div class="absolute inset-0 bg-blue-700 opacity-50 mx-auto"></div>
+          <img class="w-full h-full object-cover" src="../static/img/pim_1.jpg" alt="Pin Image" />
+        </div>
+        <span class="absolute bottom-0 right-0 mr-2 text-red-200 font-medium">{{$t('pin')}}</span>
+      </nuxt-link>
       <nuxt-link
         :to="localePath({name:'urunler-burc'})"
-        class="ml-4 w-20 h-20 bg-red-500 sm:w-48 sm:h-24 lg:w-64 lg:h-32"
-      >{{$t('bushing')}}</nuxt-link>
+        class="relative shadow overflow-hidden rounded ml-4 w-20 h-20 bg-red-500 sm:w-48 sm:h-24 lg:w-64 lg:h-32"
+      >
+        <div class="relative w-full h-full object-cover">
+          <div class="absolute inset-0 bg-red-700 opacity-50 mx-auto"></div>
+          <img class="w-full h-full object-cover" src="../static/img/pim_1.jpg" alt="Pin Image" />
+        </div>
+        <span class="absolute bottom-0 right-0 text-blue-200 font-medium">{{$t('bushing')}}</span>
+      </nuxt-link>
     </div>
     <div class="flex flex-wrap justify-between px-8 py-10 sm:px-12 lg:px-24">
       <IndexCard

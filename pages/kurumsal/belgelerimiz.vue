@@ -1,32 +1,51 @@
 <template>
-  <BasicCertificate :name="name" imageUrl="https://via.placeholder.com/250" :imageAlt="imageAlt"></BasicCertificate>
+  <div class="flex flex-wrap">
+    <BasicCertificate
+      class="mt-8 first:mt-0 md:w-64 md:mt-0 md:mx-2 md:my-2"
+      v-for="(cert, index) in certs"
+      :key="index"
+      :name="cert.name"
+      :imageUrl="cert.imageUrl"
+      :imageAlt="cert.imageAlt"
+    ></BasicCertificate>
+  </div>
 </template>
-<i18n>
-{
-  "tr":{
-    "certs":"Belgelerimiz"
-  },
-  "en":{
-    "certs":"Certificates"
-  }
-}
-</i18n>
+
 <script>
 import BasicCertificate from "@/components/BasicCertificate";
 export default {
   components: { BasicCertificate },
   data() {
     return {
-      name: {
-        tr: "Kalite Belgesi - ISO 9001:2005",
-        en: "Quality Certificate - ISO 9001:2005"
-      },
-      imageAlt: {
-        tr: "yertutucu",
-        en: "placeholder"
-      }
+      certs: [
+        {
+          name: {
+            tr: "Kalite Belgesi - ISO 9001:2005",
+            en: "Quality Certificate - ISO 9001:2005"
+          },
+          imageAlt: {
+            tr: "yertutucu",
+            en: "placeholder"
+          },
+          imageUrl:
+            "http://odakmakina.net/wp-content/uploads/2016/09/Resim2.jpg"
+        },
+        {
+          name: {
+            tr: "Kalite Belgesi - ISO 9001:2005",
+            en: "Quality Certificate - ISO 9001:2005"
+          },
+          imageAlt: {
+            tr: "yertutucu",
+            en: "placeholder"
+          },
+          imageUrl:
+            "http://odakmakina.net/wp-content/uploads/2016/09/Resim2.jpg"
+        }
+      ]
     };
   },
+
   head() {
     return {
       title: this.$t("certs"),

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2 class="text-sm text-gray-700 font-semibold">{{name}}</h2>
-    <img class="block mx-auto mt-4" :src="imageUrl" :alt="imageAlt" />
+    <h2 class="text-sm text-gray-700 font-semibold">{{translatedName}}</h2>
+    <img class="block mx-auto mt-4" :src="imageUrl" :alt="translatedAlt" />
   </div>
 </template>
 
@@ -11,6 +11,14 @@ export default {
     name: String,
     imageUrl: String,
     imageAlt: String
+  },
+  computed: {
+    translatedName() {
+      return this.name[this.$i18n.locale];
+    },
+    translatedAlt() {
+      return this.imageAlt[this.$i18n.locale];
+    }
   }
 };
 </script>
