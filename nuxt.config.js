@@ -1,4 +1,4 @@
-
+import os from "os";
 export default {
   mode: 'universal',
   /*
@@ -57,8 +57,14 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     'nuxt-i18n',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    // '@nuxtjs/sitemap'
+
   ],
+  // sitemap: {
+  //   path: "/sitemap.xml",
+  //   hostname: "localhost:3000"
+  // },
   i18n: {
     strategy: 'prefix_and_default',
     defaultLocale: 'tr',
@@ -81,7 +87,9 @@ export default {
   axios: {
   },
   router: { middleware: "redirect" },
-
+  serverMiddleware: [
+    "@/api/contact"
+  ],
 
   /*
   ** Build configuration
