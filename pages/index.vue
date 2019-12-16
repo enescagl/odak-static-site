@@ -43,16 +43,16 @@
     "pin":"Pim",
     "bushing":"Burç",
     "quality":"Kalite öncelikli çalışmalarımız ile siz müşterilerimizin isteklerini karşılıyoruz.",
-    "worker":"Alanında uzman 40 çalışanımızla isteklerinizi zamanında ve yüksek kaliteyle yerine getiriyoruz.",
-    "global":"20'den fazla ülkeye ihracat ile nerede olursanız olun her zaman isteklerinize cevap veriyoruz.",
+    "worker":"Alanında uzman çalışanlarımızla isteklerinizi zamanında ve yüksek kaliteyle yerine getiriyoruz.",
+    "global":"Sizlerin sayesinde ürünlerimizi tüm dünyaya ihraç ediyoruz.",
     "sales": "Satış öncesi ve sonrası müşteri odaklı çözümlerimizle sizlerin memnuniyetini gözetiyoruz."
   },
   "en":{
     "pin":"Pin",
     "bushing":"Bushing",
     "quality":"We meet the demands of our customers with our quality priority works.",
-    "worker":"We fulfill your wishes in a timely manner and with high quality with our 40 expert staff.",
-    "global":"With exports to more than 20 countries, we always respond to your requests wherever you are.",
+    "worker":"We fulfill your wishes in a timely manner and with high quality with our expert staff.",
+    "global":"Thanks to you, we export our products all over the world.",
     "sales": "We provide your satisfaction with our customer-oriented solutions before and after sales."
   }
 }
