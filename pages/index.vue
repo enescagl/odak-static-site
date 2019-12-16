@@ -14,7 +14,7 @@
           <img class="w-full h-full object-cover" src="../static/img/pim.jpg" alt="Pin Image" />
         </div>
         <span
-          class="absolute bottom-0 right-0 mr-2 text-red-100 text-base sm:text-lg font-medium sm:mr-4 sm:mb-2"
+          class="absolute bottom-0 right-0 mr-2 text-red-100 text-base font-semibold sm:text-lg sm:mr-4 sm:mb-2"
         >{{$t('pin')}}</span>
       </nuxt-link>
       <nuxt-link
@@ -26,7 +26,7 @@
           <img class="w-full h-full object-cover" src="../static/img/burc.jpg" alt="Pin Image" />
         </div>
         <span
-          class="absolute bottom-0 right-0 mr-2 text-blue-100 text-base sm:text-lg font-medium sm:mr-4 sm:mb-2"
+          class="absolute bottom-0 right-0 mr-2 text-blue-100 text-base font-semibold sm:text-lg sm:mr-4 sm:mb-2"
         >{{$t('bushing')}}</span>
       </nuxt-link>
     </div>

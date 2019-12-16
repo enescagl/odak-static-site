@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-200 min-h-screen flex flex-col justify-between">
+  <div class="bg-gray-200 min-h-screen flex flex-col justify-between font-sans">
     <site-header></site-header>
     <nuxt class="flex-1" />
     <site-footer></site-footer>
