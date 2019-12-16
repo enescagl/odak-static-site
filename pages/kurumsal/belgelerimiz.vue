@@ -29,18 +29,6 @@ export default {
           },
           imageUrl:
             "http://odakmakina.net/wp-content/uploads/2016/09/Resim2.jpg"
-        },
-        {
-          name: {
-            tr: "Kalite Belgesi - ISO 9001:2005",
-            en: "Quality Certificate - ISO 9001:2005"
-          },
-          imageAlt: {
-            tr: "yertutucu",
-            en: "placeholder"
-          },
-          imageUrl:
-            "http://odakmakina.net/wp-content/uploads/2016/09/Resim2.jpg"
         }
       ]
     };

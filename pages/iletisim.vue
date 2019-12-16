@@ -73,7 +73,7 @@
           <a :href="`fax:+9${fax}`" class="ml-2 font-medium text-gray-600 text-xs">{{fax}}</a>
         </div>
       </div>
-      <ContactForm class="mt-8 sm:mt-0 sm:w-1/2 lg:w-full"></ContactForm>
+      <!-- <ContactForm class="mt-8 sm:mt-0 sm:w-1/2 lg:w-full lg:mt-4"></ContactForm> -->
     </div>
   </div>
 </template>

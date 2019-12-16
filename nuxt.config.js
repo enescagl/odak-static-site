@@ -87,9 +87,9 @@ export default {
   axios: {
   },
   router: { middleware: "redirect" },
-  serverMiddleware: [
-    "@/api/contact"
-  ],
+  // serverMiddleware: [
+  //   "./api/contact"
+  // ],
 
   /*
   ** Build configuration

@@ -1,10 +1,10 @@
 <template>
   <div>
     <h2 class="text-sm text-gray-600 font-medium">{{$t("contact_us")}}</h2>
-    <form class="flex flex-col mt-4" action>
+    <form class="flex flex-col mt-4" @submit.prevent="submitForm()">
       <label class="text-xs text-gray-600 font-medium" for="name">{{$t("name")}}</label>
       <input
-        class="mt-2 py-1 px-2 max-w-sm rounded-sm shadow-inner text-xs text-gray-600 font-medium placeholder-gray-400 lg:max-w-full"
+        class="mt-2 py-1 px-2 max-w-sm rounded-sm shadow-inner text-xs text-gray-600 bg-gray-100 font-medium placeholder-gray-400 lg:max-w-full"
         :placeholder="$t('name')"
         v-model="name"
         type="text"
@@ -13,7 +13,7 @@
       />
       <label class="mt-4 text-xs text-gray-600 font-medium" for="email">{{$t("email")}}</label>
       <input
-        class="mt-2 py-1 px-2 max-w-sm rounded-sm shadow-inner text-xs text-gray-600 font-medium placeholder-gray-400 lg:max-w-full"
+        class="mt-2 py-1 px-2 max-w-sm rounded-sm shadow-inner text-xs text-gray-600 bg-gray-100 font-medium placeholder-gray-400 lg:max-w-full"
         :placeholder="$t('email')"
         v-model="email"
         type="email"
@@ -22,7 +22,7 @@
       />
       <label class="mt-4 text-xs text-gray-600 font-medium" for="subject">{{$t("subject")}}</label>
       <input
-        class="mt-2 py-1 px-2 max-w-sm rounded-sm shadow-inner text-xs text-gray-600 font-medium placeholder-gray-400 lg:max-w-full"
+        class="mt-2 py-1 px-2 max-w-sm rounded-sm shadow-inner text-xs text-gray-600 bg-gray-100 font-medium placeholder-gray-400 lg:max-w-full"
         :placeholder="$t('subject')"
         v-model="subject"
         type="text"
@@ -31,7 +31,7 @@
       />
       <label class="mt-4 text-xs text-gray-600 font-medium" for="message">{{$t("message")}}</label>
       <textarea
-        class="resize-none mt-2 py-1 px-2 max-w-sm rounded-sm shadow-inner text-xs text-gray-600 font-medium placeholder-gray-400 lg:max-w-full"
+        class="resize-none mt-2 py-1 px-2 max-w-sm rounded-sm shadow-inner text-xs text-gray-600 bg-gray-100 font-medium placeholder-gray-400 lg:max-w-full"
         :placeholder="$t('message')"
         v-model="message"
         name="message"
@@ -41,8 +41,7 @@
       ></textarea>
       <button
         class="w-1/4 ml-auto mt-4 py-1 px-auto rounded-sm shadow text-xs text-white bg-gray-500 font-medium placeholder-gray-400"
-        type="submit"
-      >{{$t("submit")}}</button>
+      >{{$t('submit')}}</button>
     </form>
   </div>
 </template>
@@ -108,24 +107,27 @@ export default {
       }
     },
     async submitForm() {
-      validate();
+      this.validate();
       this.submitting = true;
       this.error = false;
-      try {
-        await this.$axios.$post("", {
+      await this.$axios
+        .$post("/contact_form", {
           name: this.name,
           email: this.email,
           subject: this.subject,
           message: this.message
+        })
+        .then(res => {
+          console.log(res);
+          this.submitting = false;
+          this.isSubmited = true;
+          new Promise(resolve => setTimeout(resolve, 10000));
+        })
+        .catch(err => {
+          this.submitting = false;
+          this.error = true;
+          console.error(err);
         });
-        this.submitting = false;
-        this.isSubmited = true;
-        await new Promise(resolve => setTimeout(resolve, 10000));
-      } catch (e) {
-        this.submitting = false;
-        this.error = true;
-        console.error(e);
-      }
     }
   }
 };

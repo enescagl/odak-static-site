@@ -38,30 +38,6 @@ export default {
           },
           imageUrl:
             "http://odakmakina.net/wp-content/uploads/2016/09/Resim2.jpg"
-        },
-        {
-          name: {
-            tr: "Fuar - Suudi Arabistan IEEF 2015",
-            en: "Exhibitions - Suudi Arabistan IEEF 2015"
-          },
-          imageAlt: {
-            tr: "yertutucu",
-            en: "placeholder"
-          },
-          imageUrl:
-            "http://odakmakina.net/wp-content/uploads/2016/09/Resim2.jpg"
-        },
-        {
-          name: {
-            tr: "Fuar - Suudi Arabistan IEEF 2015",
-            en: "Exhibitions - Suudi Arabistan IEEF 2015"
-          },
-          imageAlt: {
-            tr: "yertutucu",
-            en: "placeholder"
-          },
-          imageUrl:
-            "http://odakmakina.net/wp-content/uploads/2016/09/Resim2.jpg"
         }
       ]
     };
