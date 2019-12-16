@@ -12,7 +12,7 @@
       />
     </div>
     <div class="mt-3">
-      <p class="text-left text-xs text-gray-700 font-semibold sm:text-sm md:text-base">{{text}}</p>
+      <p class="text-left text-xs text-gray-700 font-semibold sm:text-sm lg:text-base">{{text}}</p>
     </div>
   </div>
 </template>
