@@ -88,7 +88,7 @@ export default {
   },
   router: { middleware: "redirect" },
   // serverMiddleware: [
-  //   "./api/contact"
+  //   { path: '/api', handler: '@/api/contact.js' },
   // ],
 
   /*

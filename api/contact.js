@@ -6,7 +6,9 @@ const serverless = ("serverless-http");
 
 const app = express();
 app.use(express.json());
-
+app.get("/", (req, res) => {
+    res.json({ message: "mesaj" });
+});
 app.post("/contact_form", (req, res) => {
     const attributes = ["name", "email", "subject", "message"];
     const sanitizedAttributes = attributes.map(n => validateAndSanitize(n, req.body[n]));
@@ -22,14 +24,14 @@ app.post("/contact_form", (req, res) => {
 
 });
 
-const rejectFunctions = new Map([
-    ["name", val => val.length < 3],
-    ["email", val => validator.isEmail(val)],
-    ["message", val => val.length < 10]
-]);
+const rejectFunctions = {
+    name: val => val.length < 3,
+    email: val => !validator.isEmail(val),
+    msg: val => val.length < 10
+}
 
 const validateAndSanitize = (key, value) => {
-    return rejectFunctions.has(key) && !rejectFunctions.get(key)(value) && xssFilters.inHTMLData(value);
+    return rejectFunctions.hasOwnProperty(key) && !rejectFunctions[key](value) && xssFilters.inHTMLData(value)
 }
 
 const sendMail = (name, email, subject, message) => {

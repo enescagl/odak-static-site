@@ -11,9 +11,11 @@
       >
         <div class="relative w-full h-full object-cover">
           <div class="absolute inset-0 bg-blue-700 opacity-50 mx-auto"></div>
-          <img class="w-full h-full object-cover" src="../static/img/pim_1.jpg" alt="Pin Image" />
+          <img class="w-full h-full object-cover" src="../static/img/pim.jpg" alt="Pin Image" />
         </div>
-        <span class="absolute bottom-0 right-0 mr-2 text-red-200 font-medium">{{$t('pin')}}</span>
+        <span
+          class="absolute bottom-0 right-0 mr-2 text-red-100 text-base sm:text-lg font-medium sm:mr-4 sm:mb-2"
+        >{{$t('pin')}}</span>
       </nuxt-link>
       <nuxt-link
         :to="localePath({name:'urunler-burc'})"
@@ -21,9 +23,11 @@
       >
         <div class="relative w-full h-full object-cover">
           <div class="absolute inset-0 bg-red-700 opacity-50 mx-auto"></div>
-          <img class="w-full h-full object-cover" src="../static/img/pim_1.jpg" alt="Pin Image" />
+          <img class="w-full h-full object-cover" src="../static/img/burc.jpg" alt="Pin Image" />
         </div>
-        <span class="absolute bottom-0 right-0 text-blue-200 font-medium">{{$t('bushing')}}</span>
+        <span
+          class="absolute bottom-0 right-0 mr-2 text-blue-100 text-base sm:text-lg font-medium sm:mr-4 sm:mb-2"
+        >{{$t('bushing')}}</span>
       </nuxt-link>
     </div>
     <div class="flex flex-wrap justify-between px-8 py-10 sm:px-12 lg:px-24">
