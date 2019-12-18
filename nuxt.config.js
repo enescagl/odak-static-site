@@ -85,6 +85,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL: "https://www.odakmakina.com/.netlify/functions"
   },
   router: { middleware: "redirect" },
   // serverMiddleware: [
