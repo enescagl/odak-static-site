@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "build:function": "netlify-lambda build ./api",
+    "lambda-build": "yarn install --cwd ./api && netlify-lambda build ./api",
     "start": "nuxt start",
-    "generate": "nuxt generate && yarn build:function"
+    "generate": "nuxt generate && yarn lambda-build"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",

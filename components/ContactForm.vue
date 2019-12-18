@@ -111,7 +111,7 @@ export default {
       this.submitting = true;
       this.error = false;
       await this.$axios
-        .$post("/", {
+        .$post("/.netlify/functions/contact", {
           name: this.name,
           email: this.email,
           subject: this.subject,
