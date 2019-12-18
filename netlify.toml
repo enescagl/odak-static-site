@@ -1,6 +1,6 @@
 [build]
   command = "yarn generate"
   functions = "api"
-  publish = "build"
+  publish = "dist"
 [build.environment]
   CONTACT_EMAIL = "enes.cagliyan@gmail.com"
