@@ -58,13 +58,13 @@ export default {
     '@nuxtjs/axios',
     'nuxt-i18n',
     '@nuxtjs/robots',
-    // '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap'
 
   ],
-  // sitemap: {
-  //   path: "/sitemap.xml",
-  //   hostname: "localhost:3000"
-  // },
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: "https://www.odakmakina.com/"
+  },
   i18n: {
     strategy: 'prefix_and_default',
     defaultLocale: 'tr',

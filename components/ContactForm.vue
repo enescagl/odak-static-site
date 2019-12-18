@@ -111,7 +111,7 @@ export default {
       this.submitting = true;
       this.error = false;
       await this.$axios
-        .$post("/contact_form", {
+        .$post("/", {
           name: this.name,
           email: this.email,
           subject: this.subject,

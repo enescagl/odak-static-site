@@ -1,0 +1,6 @@
+[build]
+  command = "yarn build"
+  functions = "api"
+  publish = "build"
+[build.environment]
+  CONTACT_EMAIL = "enes.cagliyan@gmail.com"
