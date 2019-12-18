@@ -7,8 +7,9 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
+    "build:function": "netlify-lambda build ./api",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate && yarn build:function"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",
