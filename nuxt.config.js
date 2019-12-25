@@ -1,15 +1,20 @@
 import os from "os";
+const baseUrl = process.env.BASE_URL || 'https://www.odakmakina.com'
+
 export default {
   mode: 'universal',
   /*
   ** Headers of the page
   */
+  env: {
+    baseUrl
+  },
   head: {
     titleTemplate: '%s - Odak İş Makinaları',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Odak İş Makinaları Websitesi' },
+      { hid: 'description', name: 'description', content: 'Odak İş Makinaları ' },
       {
         property: 'og:title',
         content: 'Odak Makina',
@@ -85,7 +90,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: "https://www.odakmakina.com/.netlify/functions"
+    baseURL: "/.netlify/functions"
   },
   router: { middleware: "redirect" },
   // serverMiddleware: [
