@@ -1,26 +1,26 @@
 <template>
-  <header class="px-6 py-2 flex justify-between items-center sm:px-12 sm:py-4 lg:px-24">
+  <header class="px-6 py-2 flex justify-between items-center sm:px-12 sm:py-4 lg:px-24 xl:px-64">
     <nuxt-link :to="localePath({name:'index'})">
       <img class="w-32 object-cover" src="../static/img/odak_logo.png" alt="Odak Makina Logo" />
     </nuxt-link>
     <div class="hidden relative lg:flex lg:block mt-2 text-gray-600 text-sm font-semibold">
       <ul class="block flex">
-        <li class="hover:text-gray-700">
+        <li class="transition-colors duration-100 ease-in hover:text-gray-700">
           <nuxt-link :to="localePath({ name: 'index' })">{{$t("home")}}</nuxt-link>
         </li>
-        <li class="ml-6 hover:text-gray-700">
+        <li class="ml-6 transition-colors duration-100 ease-in hover:text-gray-700">
           <nuxt-link :to="localePath({ name: 'kurumsal' })">{{$t("corp")}}</nuxt-link>
         </li>
-        <li class="ml-6 hover:text-gray-700">
+        <li class="ml-6 transition-colors duration-100 ease-in hover:text-gray-700">
           <nuxt-link :to="localePath({ name: 'haberler' })">{{$t("news")}}</nuxt-link>
         </li>
-        <li class="ml-6 hover:text-gray-700">
+        <li class="ml-6 transition-colors duration-100 ease-in hover:text-gray-700">
           <nuxt-link :to="localePath({ name: 'iletisim' })">{{$t("contact")}}</nuxt-link>
         </li>
       </ul>
       <ul class="ml-16 flex">
         <li
-          class="ml-6 first:ml-0 hover:text-gray-700"
+          class="ml-6 first:ml-0 transition-colors duration-100 ease-in hover:text-gray-700"
           v-for="locale in allLocales"
           :key="locale.code"
         >
@@ -43,8 +43,12 @@
           />
         </svg>
       </button>
-      <div :class="menuOpen ? 'block' : 'hidden'">
-        <div class="pl-10 pr-6 z-10 w-48 fixed inset-y-0 right-0 bg-gray-200 sm:pr-12 sm:w-64">
+      <!-- <div :class="menuOpen ? 'block' : 'hidden'"> -->
+      <div class="block">
+        <div
+          class="transform transition duration-200 ease-out pl-10 pr-6 z-10 w-48 fixed inset-y-0 right-0 bg-gray-200 sm:pr-12 sm:w-64"
+          :class="menuOpen ? 'translate-x-0' : 'translate-x-full'"
+        >
           <div class="text-right mt-5 sm:mt-8">
             <button @click="menuOpen = !menuOpen">
               <svg
@@ -98,7 +102,7 @@
             </ul>
           </div>
         </div>
-        <div class="fixed inset-0 bg-gray-800 opacity-50">
+        <div v-if="menuOpen" class="fixed inset-0 bg-gray-800 opacity-50">
           <button class="h-full w-full" @click="menuOpen = !menuOpen"></button>
         </div>
       </div>

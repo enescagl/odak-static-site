@@ -1,25 +1,28 @@
 <template>
   <footer class="mt-12 bg-blue-800 pt-10 text-gray-200 text-xs">
-    <div class="flex px-8 sm:px-12 lg:px-24">
+    <div class="flex px-8 sm:px-12 lg:px-24 xl:px-64">
       <div class="w-1/2">
         <span class="block 3">
-          <nuxt-link class="hover:text-gray-400" :to="localePath({ name: 'index' })">{{$t('home')}}</nuxt-link>
+          <nuxt-link
+            class="transition-colors ease-in duration-100 hover:text-gray-400"
+            :to="localePath({ name: 'index' })"
+          >{{$t('home')}}</nuxt-link>
         </span>
         <span class="block mt-3">
           <nuxt-link
-            class="hover:text-gray-400"
+            class="transition-colors ease-in duration-100 hover:text-gray-400"
             :to="localePath({ name: 'kurumsal' })"
           >{{$t('corp')}}</nuxt-link>
         </span>
         <span class="block mt-3">
           <nuxt-link
-            class="hover:text-gray-400"
+            class="transition-colors ease-in duration-100 hover:text-gray-400"
             :to="localePath({ name: 'haberler' })"
           >{{$t('news')}}</nuxt-link>
         </span>
         <span class="block mt-3">
           <nuxt-link
-            class="hover:text-gray-400"
+            class="transition-colors ease-in duration-100 hover:text-gray-400"
             :to="localePath({ name: 'iletisim' })"
           >{{$t('contact')}}</nuxt-link>
         </span>
@@ -29,25 +32,25 @@
           v-for="locale in $i18n.locales"
           :key="locale.code"
           :to="switchLocalePath(locale.code)"
-        >locale</nuxt-link>
+        >{{locale}}</nuxt-link>
       </div>
       <div class="w-1/2">
         <h5 class="underline">{{$t("products")}}</h5>
         <span class="block mt-3">
           <nuxt-link
-            class="hover:text-gray-400"
+            class="transition-colors ease-in duration-100 hover:text-gray-400"
             :to="localePath({name:'urunler-pim'})"
           >{{$t("pin")}}</nuxt-link>
         </span>
         <span class="block mt-3">
           <nuxt-link
-            class="hover:text-gray-400"
+            class="transition-colors ease-in duration-100 hover:text-gray-400"
             :to="localePath({name:'urunler-burc'})"
           >{{$t("bushing")}}</nuxt-link>
         </span>
       </div>
     </div>
-    <div class="px-8 pt-5 pb-8 mt-6 bg-blue-700 sm:px-12 lg:px-24">
+    <div class="px-8 pt-5 pb-8 mt-6 bg-blue-700 sm:px-12 lg:px-24 xl:px-64">
       <div class="flex align-baseline">
         <div>
           <svg
@@ -78,7 +81,10 @@
             />
           </svg>
         </span>
-        <a :href="`tel:+9${phone1}`" class="ml-2 font-medium text-gray-200 text-xs">{{phone1}}</a>
+        <a
+          :href="`tel:+9${phone1}`"
+          class="ml-2 transition-colors ease-in duration-100 font-medium text-gray-200 text-xs hover:text-gray-400"
+        >{{phone1}}</a>
       </div>
       <div class="mt-4 flex align-baseline">
         <span>
@@ -93,7 +99,10 @@
             />
           </svg>
         </span>
-        <a :href="`tel:+9${phone2}`" class="ml-2 font-medium text-gray-200 text-xs">{{phone2}}</a>
+        <a
+          :href="`tel:+9${phone2}`"
+          class="ml-2 transition-colors ease-in duration-100 font-medium text-gray-200 text-xs hover:text-gray-400"
+        >{{phone2}}</a>
       </div>
       <div class="mt-4 flex align-baseline">
         <span>
@@ -108,11 +117,14 @@
             />
           </svg>
         </span>
-        <a :href="`fax:+9${fax}`" class="ml-2 font-medium text-gray-200 text-xs">{{fax}}</a>
+        <a
+          :href="`fax:+9${fax}`"
+          class="ml-2 transition-colors ease-in duration-100 font-medium text-gray-200 text-xs hover:text-gray-400"
+        >{{fax}}</a>
       </div>
 
       <div class="mt-4 flex">
-        <a href="#" class="hover:text-gray-400">
+        <a href="#" class="transition-colors ease-in duration-100 hover:text-gray-400">
           <svg
             class="w-4 h-4"
             viewBox="0 0 24 24"
@@ -124,7 +136,7 @@
             />
           </svg>
         </a>
-        <a href="#" class="ml-3 hover:text-gray-400">
+        <a href="#" class="ml-3 transition-colors ease-in duration-100 hover:text-gray-400">
           <svg
             class="w-4 h-4"
             fill="currentColor"
@@ -136,7 +148,10 @@
             />
           </svg>
         </a>
-        <a href="https://www.linkedin.com/company/odak-makina/" class="ml-3 hover:text-gray-400">
+        <a
+          href="https://www.linkedin.com/company/odak-makina/"
+          class="ml-3 transition-colors ease-in duration-100 hover:text-gray-400"
+        >
           <svg
             class="w-4 h-4"
             fill="currentColor"
@@ -148,7 +163,7 @@
             />
           </svg>
         </a>
-        <a href="#" class="ml-3 hover:text-gray-400">
+        <a href="#" class="ml-3 transition-colors ease-in duration-100 hover:text-gray-400">
           <svg
             class="w-4 h-4"
             fill="currentColor"
@@ -162,7 +177,7 @@
         </a>
       </div>
     </div>
-    <div class="sm:relative flex px-8 py-2 bg-gray-200 items-center sm:px-12 lg:px-24">
+    <div class="sm:relative flex px-8 py-2 bg-gray-200 items-center sm:px-12 lg:px-24 xl:px-64">
       <div class="w-20">
         <img class="logo-black" src="../static/img/odak_logo.png" alt="Odak Makina Logo" />
       </div>

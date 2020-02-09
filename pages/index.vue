@@ -4,7 +4,7 @@
       <div class="absolute inset-0 bg-blue-700 opacity-50 mx-auto"></div>
       <img class="object-cover h-full mx-auto" src="../static/img/slider_2.jpg" alt />
     </div>
-    <div class="flex justify-end relative -mt-6 px-6 sm:px-12 lg:px-24">
+    <div class="flex justify-end relative -mt-6 px-6 sm:px-12 lg:px-24 xl:px-64">
       <nuxt-link
         :to="localePath({name:'urunler-pim'})"
         class="relative shadow overflow-hidden rounded w-20 h-20 bg-blue-500 sm:w-48 sm:h-24 lg:w-64 lg:h-32"
@@ -30,7 +30,7 @@
         >{{$t('bushing')}}</span>
       </nuxt-link>
     </div>
-    <div class="flex flex-wrap justify-between px-8 py-10 sm:px-12 lg:px-24">
+    <div class="flex flex-wrap justify-between px-8 py-10 sm:px-12 lg:px-24 xl:px-64">
       <IndexCard
         class="flex-shrink-0 flex-grow-0"
         v-for="(cardInfo,id) in cardInfos"
@@ -79,6 +79,9 @@ export default {
           template: chunk => `${chunk} - Pim & Burç`,
           vmid: "og:title"
         }
+      ],
+      script: [
+        { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
       ]
     };
   },
