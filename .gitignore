@@ -93,6 +93,7 @@ dist
 
 # Serverless directories
 .serverless/
+.functions-dist/
 
 # FuseBox cache
 .fusebox/
